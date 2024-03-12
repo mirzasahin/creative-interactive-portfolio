@@ -1,0 +1,29 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"firstname": {
+				"__TYPE__": "FieldContent",
+				"value": "sugar",
+				"type": "Text"
+			},
+			"lastname": {
+				"__TYPE__": "FieldContent",
+				"value": "pass",
+				"type": "Text"
+			},
+			"tagline": {
+				"__TYPE__": "FieldContent",
+				"value": "add",
+				"type": "Text"
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": []
+			}
+		]
+	}
+]
