@@ -95,8 +95,8 @@ export default function ContentList({
 
     return asImageSrc(image, {
       fit: "crop",
-      w: 480,
-      h: 270,
+      w: 960,
+      h: 540,
       exp: -5,
     });
   });
