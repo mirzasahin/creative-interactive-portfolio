@@ -768,6 +768,51 @@ export type ImageBlockSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Primary content in *SourceText → Primary*
+ */
+export interface SourceTextSliceDefaultPrimary {
+  /**
+   * Source Text field in *SourceText → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: source_text.primary.source_text
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  source_text: prismic.RichTextField;
+}
+
+/**
+ * Default variation for SourceText Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SourceTextSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<SourceTextSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *SourceText*
+ */
+type SourceTextSliceVariation = SourceTextSliceDefault;
+
+/**
+ * SourceText Shared Slice
+ *
+ * - **API ID**: `source_text`
+ * - **Description**: SourceText
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SourceTextSlice = prismic.SharedSlice<
+  "source_text",
+  SourceTextSliceVariation
+>;
+
+/**
  * Primary content in *TechList → Primary*
  */
 export interface TechListSliceDefaultPrimary {
@@ -924,6 +969,10 @@ declare module "@prismicio/client" {
       ImageBlockSliceDefaultPrimary,
       ImageBlockSliceVariation,
       ImageBlockSliceDefault,
+      SourceTextSlice,
+      SourceTextSliceDefaultPrimary,
+      SourceTextSliceVariation,
+      SourceTextSliceDefault,
       TechListSlice,
       TechListSliceDefaultPrimary,
       TechListSliceDefaultItem,
