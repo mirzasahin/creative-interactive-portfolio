@@ -95,8 +95,8 @@ export default function ContentList({
 
     return asImageSrc(image, {
       fit: "crop",
-      w: 960,
-      h: 540,
+      w: 320,
+      h: 220,
       exp: -5,
     });
   });
@@ -141,7 +141,7 @@ export default function ContentList({
                     <span className="text-3xl font-bold">
                       {item.data.title}
                     </span>
-                    <div className="flex gap-3 text-yellow-400 text-lg font-bold">
+                    <div className="flex flex-wrap gap-3 text-yellow-400 text-sm md:text-lg font-bold">
                       {item.tags.map((tag, index) => (
                         <span key={index}>{tag}</span>
                       ))}
@@ -159,7 +159,7 @@ export default function ContentList({
 
       {/*  Hover Element */}
       <div
-        className="hover-reveal pointer-events-none absolute left-0 top-0 -z-10 h-[270px] w-[480px] rounded-lg bg-cover bg-center opacity-0f transition-[background] duration-300"
+        className="hover-reveal pointer-events-none absolute left-0 top-0 -z-10 h-[220px] w-[320px] rounded-lg bg-cover bg-center opacity-0f transition-[background] duration-300"
         style={{
           backgroundImage:
             currentItem !== null ? `url(${contentImages[currentItem]})` : "",

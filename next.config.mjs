@@ -1,4 +1,8 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {};
+import { NextResponse } from "next/server.js";
+import { revalidateTag } from "next/cache.js";
 
-export default nextConfig;
+export async function POST() {
+  revalidateTag("prismic");
+
+  return NextResponse.json({ revalidateTag: true, now: Date.now() });
+}
